@@ -1,0 +1,163 @@
+.pizzadiv {
+    background-image: url("https://clipart-best.com/img/pizza/pizza-clip-art-5.png");
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+
+    animation-name: pizzarotate;
+    animation-duration: 4s;
+    animation-delay: 0ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes pizzarotate {
+    from {
+        animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    }
+
+    99% {
+        visibility: visible;
+    }
+
+    to {
+        visibility: hidden;
+        transform: rotate(1080deg) scale(2, 2);
+    }
+}
+
+.topbutton {
+    float: left;
+    padding: 10px;
+    margin: 5px;
+    margin-top: -0px;
+    background-color: #ff0000;
+    background-image: linear-gradient(315deg, #ff0000 0%, #ff98a5 74%);
+    border-radius: 1em;
+    font-family: calibri;
+    font-size: 24px;
+}
+
+.checkout {
+    float: right;
+    padding-left: 2px;
+    padding-right: -2px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 2px;
+    margin-top: -6px;
+    background-color: #ff0000;
+    background-image: linear-gradient(315deg, #ff0000 0%, #ff98a5 74%);
+    border-radius: 1em;
+    font-family: calibri;
+    font-size: 50px;
+}
+
+body {
+    background-color: #000;
+
+    animation-name: backgroundcolor;
+    animation-duration: 4s;
+    animation-delay: 0ms;
+    animation-iteration-count: 2;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+}
+
+@keyframes backgroundcolor {
+    from {
+        animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+        background-color: #fff;
+    }
+
+    to {
+        background-color: #000;
+    }
+}
+
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+button {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+    background-color: #ff0000;
+    background-image: linear-gradient(315deg, #ff0000 0%, #ff98a5 90%);
+    border: none;
+    border-radius: 50%;
+    transition: 200ms;
+}
+
+button svg {
+    fill: white;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+button:before {
+    content: '';
+    position: absolute;
+    transform: translateX(-50%) translateY(45px);
+    font-size: 15px;
+    transition: 200ms;
+    color: transparent;
+    font-weight: bold;
+}
+
+button:hover {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    width: 80px;
+    height: 80px;
+}
+
+button:hover::before {
+    color: #fff;
+}
+
+button:hover svg {
+    animation: bounce 2s infinite linear;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateX(-50%) translateY(-50%)
+    }
+
+    25% {
+        transform: translateX(-50%) translateY(-65%)
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-50%)
+    }
+
+    75% {
+        transform: translateX(-50%) translateY(-35%)
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-50%)
+    }
+}
+
+button:focus {
+    outline: none;
+}
